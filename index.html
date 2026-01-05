@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HONG PH</title>
+    <title>HONG PHILIPPPINES</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
@@ -280,7 +280,7 @@
             <div>
                 <div class="photostrip-container">
                     <div class="photostrip-logo text-center mb-5">
-                        <img src="./HONG PH CREATIVES.png" alt="HONG PH Logo" class="mx-auto" style="max-width: 200px; height: 155px;">
+                        <img src="./Myhonghong_1.png" alt="HONG PH Logo" class="mx-auto" style="max-width: 200px; height: 200px;">
                     </div>
                     <div class="photostrip-header text-center mb-5">
                     </div>
@@ -296,7 +296,7 @@
 
                     <div class="photostrip-footer">
                         <p class="text-[18px] text-pink-700">Hong Pichetpong Chiradatesakunvong</p>
-                        <p class="text-[10px] text-pink-700">HONG PH</p>
+                        <p class="text-[10px] text-pink-700">HONG PHILIPPINES</p>
                     </div>
                 </div>
                 
@@ -601,7 +601,7 @@
                     // Add HAPPY BIRTHDAY ELIOT! logo at the top
                     const logoElement = document.querySelector('.photostrip-logo img');
                     if (logoElement && logoElement.complete && logoElement.naturalHeight !== 0) {
-                        const logoWidth = 155;
+                        const logoWidth = 200;
                         const logoHeight = (logoElement.naturalHeight / logoElement.naturalWidth) * logoWidth;
                         const logoX = (stripWidth - logoWidth) / 2;
                         const logoY = 20;
@@ -611,7 +611,7 @@
                     
                     // Add the HAPPY BIRTHDAY ELIOT! group photo area
                     const membersAreaY = 180;
-                    const membersAreaHeight = 300;
+                    const membersAreaHeight = 200;
                     
                     const drawMembersArea = () => {
                         // Create a subtle overlay background
@@ -653,7 +653,7 @@
                     drawMembersArea();
                     
                     // Photo slots - clean layout matching reference
-                    const photoStartY = 510;
+                    const photoStartY = 400;
                     const photoWidth = 390;
                     const photoHeight = 220;
                     const photoSpacing = 35;
@@ -724,13 +724,13 @@
                     ctx.font = 'bold 16px "Montserrat", sans-serif';
                     ctx.fillText('Hong Pichetpong Chiradatesakunvong', stripWidth / 2, footerStartY + 10);
                     
-                    ctx.fillStyle = '#FFA500';
+                    ctx.fillStyle = '#FF81C0';
                     ctx.font = 'bold 13px "Montserrat", sans-serif';
                     ctx.fillText('HONG PHILIPPINES', stripWidth / 2, footerStartY + 30);
                     
                     // Create download
                     const link = document.createElement('a');
-                    link.download = 'HAPPY_BIRTHDAY_ELIOT_photostrip.jpg';
+                    link.download = 'HONGPHILIPPINES_photostrip.jpg';
                     link.href = photoStripCanvas.toDataURL('image/jpeg', 0.9);
                     link.click();
                     
