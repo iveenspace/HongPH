@@ -611,7 +611,7 @@
                     
                     // Add the HAPPY BIRTHDAY ELIOT! group photo area
                     const membersAreaY = 200;
-                    const membersAreaHeight = 400;
+                    const membersAreaHeight = 300;
                     
                     const drawMembersArea = () => {
                         // Create a subtle overlay background
@@ -621,10 +621,10 @@
                         ctx.globalAlpha = 1;
                         
                         // Try to draw the XINGXING group photo if available
-                        const XINGXINGPhotoElement = document.getElementById('XINGXINGGroupPhoto');
-                        if (XINGXINGPhotoElement && XINGXINGPhotoElement.complete && XINGXINGPhotoElement.naturalHeight !== 0) {
+                        const Myhonghong_1PhotoElement = document.getElementById('Myhonghong_1GroupPhoto');
+                        if (Myhonghong_1PhotoElement && Myhonghong_1PhotoElement.complete && Myhonghong_1PhotoElement.naturalHeight !== 0) {
                             // Calculate dimensions to fit the photo properly
-                            const imgAspect = XINGXINGPhotoElement.naturalWidth / XINGXINGPhotoElement.naturalHeight;
+                            const imgAspect = Myhonghong_1PhotoElement.naturalWidth / Myhonghong_1PhotoElement.naturalHeight;
                             const areaAspect = stripWidth / membersAreaHeight;
                             
                             let drawWidth, drawHeight, drawX, drawY;
@@ -645,7 +645,7 @@
                             
                             // Add a subtle overlay to blend with the background
                             ctx.globalAlpha = 0.9;
-                            ctx.drawImage(XINGXINGPhotoElement, drawX, drawY, drawWidth, drawHeight);
+                            ctx.drawImage(Myhonghong_1PhotoElement, drawX, drawY, drawWidth, drawHeight);
                             ctx.globalAlpha = 1;
                         }
                     };
@@ -653,7 +653,7 @@
                     drawMembersArea();
                     
                     // Photo slots - clean layout matching reference
-                    const photoStartY = 550;
+                    const photoStartY = 450;
                     const photoWidth = 390;
                     const photoHeight = 220;
                     const photoSpacing = 35;
