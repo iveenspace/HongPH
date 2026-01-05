@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HONG PH</title>
+    <title>HONG PHILIPPINES</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
@@ -15,7 +15,7 @@
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #FF69B4;
-            color: #000;
+            color: #FF69B4;
             background-image: linear-gradient(to bottom, #000, #000);
             min-height: 100vh;
         }
@@ -24,7 +24,7 @@
             position: relative;
             overflow: hidden;
             border-radius: 12px;
-            background-color: #000;
+            background-color: #FF69B4;
             box-shadow: 0 10px 25px rgba(222, 176, 24, 0.713));
             border: 1px solid rgba(255,255,255,0.1);
         }
@@ -223,7 +223,7 @@
 <body class="p-4">
     <div class="max-w-4xl mx-auto">
         <header class="text-center mb-8">
-            <h1 class="text-6xl font-bold text-pink-700">HAPPY BIRTHDAY ELIOT!</h1>
+            <h1 class="text-6xl font-bold text-pink-700">HONG PHILIPPINES</h1>
         </header>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -280,7 +280,7 @@
             <div>
                 <div class="photostrip-container">
                     <div class="photostrip-logo text-center mb-5">
-                        <img src="./HONG PH CREATIVES.png" alt="HONG PH Logo" class="mx-auto" style="max-width: 200px; height: 155px;">
+                        <img src="./Myhonghong_1.png" alt="HONG PHILIPPINES Logo" class="mx-auto" style="max-width: 200px; height: 155px;">
                     </div>
                     <div class="photostrip-header text-center mb-5">
                     </div>
@@ -296,7 +296,7 @@
 
                     <div class="photostrip-footer">
                         <p class="text-[18px] text-pink-700">Hong Pichetpong Chiradatesakunvong</p>
-                        <p class="text-[10px] text-pink-700">HONG PH</p>
+                        <p class="text-[15px] text-pink-700">HONG PHILIPPINES</p>
                     </div>
                 </div>
                 
@@ -598,7 +598,7 @@
                     // Header section - add logo first
                     ctx.textAlign = 'center';
                     
-                    // Add HAPPY BIRTHDAY ELIOT! logo at the top
+                    // Add Myhonghong_1 logo at the top
                     const logoElement = document.querySelector('.photostrip-logo img');
                     if (logoElement && logoElement.complete && logoElement.naturalHeight !== 0) {
                         const logoWidth = 155;
@@ -609,9 +609,9 @@
                         ctx.drawImage(logoElement, logoX, logoY, logoWidth, logoHeight);
                     }
                     
-                    // Add the HAPPY BIRTHDAY ELIOT! group photo area
-                    const membersAreaY = 180;
-                    const membersAreaHeight = 300;
+                    // Add the Myhonghong_1 group photo area
+                    const membersAreaY = 100;
+                    const membersAreaHeight = 250;
                     
                     const drawMembersArea = () => {
                         // Create a subtle overlay background
@@ -620,11 +620,11 @@
                         ctx.fillRect(0, membersAreaY, stripWidth, membersAreaHeight);
                         ctx.globalAlpha = 1;
                         
-                        // Try to draw the XINGXING group photo if available
-                        const XINGXINGPhotoElement = document.getElementById('XINGXINGGroupPhoto');
-                        if (XINGXINGPhotoElement && XINGXINGPhotoElement.complete && XINGXINGPhotoElement.naturalHeight !== 0) {
+                        // Try to draw the Myhonghong_1 group photo if available
+                        const XINGXINGPhotoElement = document.getElementById('Myhonghong_1GroupPhoto');
+                        if (Myhonghong_1PhotoElement && Myhonghong_1PhotoElement.complete && Myhonghong_1PhotoElement.naturalHeight !== 0) {
                             // Calculate dimensions to fit the photo properly
-                            const imgAspect = XINGXINGPhotoElement.naturalWidth / XINGXINGPhotoElement.naturalHeight;
+                            const imgAspect = Myhonghong_1PhotoElement.naturalWidth / Myhonghong_1PhotoElement.naturalHeight;
                             const areaAspect = stripWidth / membersAreaHeight;
                             
                             let drawWidth, drawHeight, drawX, drawY;
@@ -653,7 +653,7 @@
                     drawMembersArea();
                     
                     // Photo slots - clean layout matching reference
-                    const photoStartY = 510;
+                    const photoStartY = 400;
                     const photoWidth = 390;
                     const photoHeight = 220;
                     const photoSpacing = 35;
@@ -707,7 +707,7 @@
                                 });
                             } else {
                                 // Placeholder text
-                                ctx.fillStyle = '#666666';
+                                ctx.fillStyle = '#FF69B4';
                                 ctx.font = '16px "Montserrat", sans-serif';
                                 ctx.textAlign = 'center';
                                 ctx.fillText(`Photo ${i + 1}`, stripWidth / 2, yPos + photoHeight / 2);
@@ -720,17 +720,17 @@
                     // Footer section - matching the exact layout with gold colors
                     const footerStartY = stripHeight - 70;
                     
-                    ctx.fillStyle = '#FF81C0';
-                    ctx.font = 'bold 16px "Montserrat", sans-serif';
+                    ctx.fillStyle = '#FF69B4';
+                    ctx.font = 'bold 18px "Montserrat", sans-serif';
                     ctx.fillText('Hong Pichetpong Chiradatesakunvong', stripWidth / 2, footerStartY + 10);
                     
-                    ctx.fillStyle = '#FFA500';
-                    ctx.font = 'bold 13px "Montserrat", sans-serif';
+                    ctx.fillStyle = '#FF69B4';
+                    ctx.font = 'bold 15px "Montserrat", sans-serif';
                     ctx.fillText('HONG PHILIPPINES', stripWidth / 2, footerStartY + 30);
                     
                     // Create download
                     const link = document.createElement('a');
-                    link.download = 'HAPPY_BIRTHDAY_ELIOT_photostrip.jpg';
+                    link.download = 'HONG PHILIPPINES_photostrip.jpg';
                     link.href = photoStripCanvas.toDataURL('image/jpeg', 0.9);
                     link.click();
                     
