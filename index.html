@@ -15,7 +15,7 @@
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #FF69B4;
-            color: #000;
+            color: #FF69B4;
             background-image: linear-gradient(to bottom, #000, #000);
             min-height: 100vh;
         }
@@ -30,7 +30,7 @@
         }
         
         .photo-slot {
-            background-color: #000;
+            background-color: #FF69B4;
             border: 2px solid #FF81C0;
             display: flex;
             align-items: center;
@@ -223,7 +223,7 @@
 <body class="p-4">
     <div class="max-w-4xl mx-auto">
         <header class="text-center mb-8">
-            <h1 class="text-6xl font-bold text-pink-700">HAPPY BIRTHDAY ELIOT!</h1>
+            <h1 class="text-6xl font-bold text-pink-700">HONG PHILIPPINES</h1>
         </header>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -280,7 +280,7 @@
             <div>
                 <div class="photostrip-container">
                     <div class="photostrip-logo text-center mb-5">
-                        <img src="./Myhonghong_1.png" alt="HONG PH Logo" class="mx-auto" style="max-width: 200px; height: 200px;">
+                        <img src="./Myhonghong_1.png" alt="HONG PH Logo" class="mx-auto" style="max-width: 200px; height: 210px;">
                     </div>
                     <div class="photostrip-header text-center mb-5">
                     </div>
@@ -610,8 +610,8 @@
                     }
                     
                     // Add the HAPPY BIRTHDAY ELIOT! group photo area
-                    const membersAreaY = 180;
-                    const membersAreaHeight = 200;
+                    const membersAreaY = 200;
+                    const membersAreaHeight = 400;
                     
                     const drawMembersArea = () => {
                         // Create a subtle overlay background
@@ -653,7 +653,7 @@
                     drawMembersArea();
                     
                     // Photo slots - clean layout matching reference
-                    const photoStartY = 400;
+                    const photoStartY = 550;
                     const photoWidth = 390;
                     const photoHeight = 220;
                     const photoSpacing = 35;
@@ -665,11 +665,11 @@
                             const yPos = photoStartY + (i * (photoHeight + photoSpacing));
                             
                             // Draw fixed rectangle frame background
-                            ctx.fillStyle = '#000000';
+                            ctx.fillStyle = '#FF69B4';
                             ctx.fillRect(photoX, yPos, photoWidth, photoHeight);
                             
                             // Add frame border
-                            ctx.strokeStyle = '#333333';
+                            ctx.strokeStyle = '#FF69B4';
                             ctx.lineWidth = 2;
                             ctx.strokeRect(photoX, yPos, photoWidth, photoHeight);
                             
@@ -707,7 +707,7 @@
                                 });
                             } else {
                                 // Placeholder text
-                                ctx.fillStyle = '#666666';
+                                ctx.fillStyle = '#FF69B4';
                                 ctx.font = '16px "Montserrat", sans-serif';
                                 ctx.textAlign = 'center';
                                 ctx.fillText(`Photo ${i + 1}`, stripWidth / 2, yPos + photoHeight / 2);
@@ -720,11 +720,11 @@
                     // Footer section - matching the exact layout with gold colors
                     const footerStartY = stripHeight - 70;
                     
-                    ctx.fillStyle = '#FF81C0';
+                    ctx.fillStyle = '#FF69B4';
                     ctx.font = 'bold 16px "Montserrat", sans-serif';
                     ctx.fillText('Hong Pichetpong Chiradatesakunvong', stripWidth / 2, footerStartY + 10);
                     
-                    ctx.fillStyle = '#FF81C0';
+                    ctx.fillStyle = '#FF69B4';
                     ctx.font = 'bold 13px "Montserrat", sans-serif';
                     ctx.fillText('HONG PHILIPPINES', stripWidth / 2, footerStartY + 30);
                     
