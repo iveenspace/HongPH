@@ -602,7 +602,7 @@
                     const logoElement = document.querySelector('.photostrip-logo img');
                     if (logoElement && logoElement.complete && logoElement.naturalHeight !== 0) {
                         const logoWidth = 200;
-                        const logoHeight = (max-width: 200px; height: 155px;) * logoWidth;
+                        const logoHeight = (logoElement.naturalHeight / logoElement.naturalWidth) * logoWidth;
                         const logoX = (stripWidth - logoWidth) / 2;
                         const logoY = 20;
                         
