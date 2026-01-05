@@ -592,7 +592,7 @@
                     const ctx = photoStripCanvas.getContext('2d');
                     
                     // Create black background
-                    ctx.fillStyle = '#000';
+                    ctx.fillStyle = '#FF69B4';
                     ctx.fillRect(0, 0, stripWidth, stripHeight);
                     
                     // Header section - add logo first
@@ -609,8 +609,8 @@
                         ctx.drawImage(logoElement, logoX, logoY, logoWidth, logoHeight);
                     }
                     
-                    // Add the HAPPY BIRTHDAY ELIOT! group photo area
-                    const membersAreaY = 180;
+                    // Add the Hong Pichetpong Chiradatesakunvong group photo area
+                    const membersAreaY = 200;
                     const membersAreaHeight = 300;
                     
                     const drawMembersArea = () => {
@@ -621,10 +621,10 @@
                         ctx.globalAlpha = 1;
                         
                         // Try to draw the XINGXING group photo if available
-                        const XINGXINGPhotoElement = document.getElementById('XINGXINGGroupPhoto');
-                        if (XINGXINGPhotoElement && XINGXINGPhotoElement.complete && XINGXINGPhotoElement.naturalHeight !== 0) {
+                        const XINGXINGPhotoElement = document.getElementById('Myhonghong_1GroupPhoto');
+                        if (Myhonghong_1PhotoElement && Myhonghong_1PhotoElement.complete && Myhonghong_1PhotoElement.naturalHeight !== 0) {
                             // Calculate dimensions to fit the photo properly
-                            const imgAspect = XINGXINGPhotoElement.naturalWidth / XINGXINGPhotoElement.naturalHeight;
+                            const imgAspect = Myhonghong_1PhotoElement.naturalWidth / Myhonghong_1PhotoElement.naturalHeight;
                             const areaAspect = stripWidth / membersAreaHeight;
                             
                             let drawWidth, drawHeight, drawX, drawY;
@@ -645,7 +645,7 @@
                             
                             // Add a subtle overlay to blend with the background
                             ctx.globalAlpha = 0.9;
-                            ctx.drawImage(XINGXINGPhotoElement, drawX, drawY, drawWidth, drawHeight);
+                            ctx.drawImage(Myhonghong_1PhotoElement, drawX, drawY, drawWidth, drawHeight);
                             ctx.globalAlpha = 1;
                         }
                     };
@@ -653,7 +653,7 @@
                     drawMembersArea();
                     
                     // Photo slots - clean layout matching reference
-                    const photoStartY = 510;
+                    const photoStartY = 400;
                     const photoWidth = 390;
                     const photoHeight = 220;
                     const photoSpacing = 35;
@@ -665,11 +665,11 @@
                             const yPos = photoStartY + (i * (photoHeight + photoSpacing));
                             
                             // Draw fixed rectangle frame background
-                            ctx.fillStyle = '#000000';
+                            ctx.fillStyle = '#FF69B4';
                             ctx.fillRect(photoX, yPos, photoWidth, photoHeight);
                             
                             // Add frame border
-                            ctx.strokeStyle = '#333333';
+                            ctx.strokeStyle = '#FF69B4';
                             ctx.lineWidth = 2;
                             ctx.strokeRect(photoX, yPos, photoWidth, photoHeight);
                             
@@ -707,7 +707,7 @@
                                 });
                             } else {
                                 // Placeholder text
-                                ctx.fillStyle = '#666666';
+                                ctx.fillStyle = '#FF69B4';
                                 ctx.font = '16px "Montserrat", sans-serif';
                                 ctx.textAlign = 'center';
                                 ctx.fillText(`Photo ${i + 1}`, stripWidth / 2, yPos + photoHeight / 2);
