@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HONG PHILIPPPINES</title>
+    <title>HAPPY BIRTHDAY ELIOT!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
@@ -14,8 +14,8 @@
         
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #FF69B4;
-            color: #FF69B4;
+            background-color: #ffffff;
+            color: #000;
             background-image: linear-gradient(to bottom, #000, #000);
             min-height: 100vh;
         }
@@ -30,7 +30,7 @@
         }
         
         .photo-slot {
-            background-color: #FF69B4;
+            background-color: #000;
             border: 2px solid #FF81C0;
             display: flex;
             align-items: center;
@@ -223,7 +223,7 @@
 <body class="p-4">
     <div class="max-w-4xl mx-auto">
         <header class="text-center mb-8">
-            <h1 class="text-6xl font-bold text-pink-700">HONG PHILIPPINES</h1>
+            <h1 class="text-6xl font-bold text-pink-700">HAPPY BIRTHDAY ELIOT!</h1>
         </header>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -280,14 +280,14 @@
             <div>
                 <div class="photostrip-container">
                     <div class="photostrip-logo text-center mb-5">
-                        <img src="./Myhonghong_1.png" alt="HONG PH Logo" class="mx-auto" style="max-width: 200px; height: 155px;">
+                        <img src="./Myhonghong_1.png" alt="HAPPY BIRTHDAY ELIOT! Logo" class="mx-auto" style="max-width: 200px; height: 155px;">
                     </div>
                     <div class="photostrip-header text-center mb-5">
                     </div>
                     
                     <!-- XINGXING Photo -->
                     <div class="group-photo-container mb-12" style="width: 405px; height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: transparent; border: none;">
-                        <img id="MyhonghongGroupPhoto" src="./Myhonghong.png" alt="MyhonghongGroup" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        <img id="XINGXINGGroupPhoto" src="./Myhonghong.png" alt="XINGXINGGroup" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                     </div>
 
                     <div id="photoStripContainer" class="flex flex-col gap-4 mb-12">
@@ -295,8 +295,8 @@
                     </div>
 
                     <div class="photostrip-footer">
-                        <p class="text-[18px] text-pink-700">Hong Pichetpong Chiradatesakunvong</p>
-                        <p class="text-[10px] text-pink-700">HONG PHILIPPINES</p>
+                        <p class="text-[18px] text-pink-700">HAPPY BIRTHDAY ELIOT!</p>
+                        <p class="text-[10px] text-orange-600">XINGQIU PHILIPPINES </p>
                     </div>
                 </div>
                 
@@ -621,10 +621,10 @@
                         ctx.globalAlpha = 1;
                         
                         // Try to draw the XINGXING group photo if available
-                        const Myhonghong_1PhotoElement = document.getElementById('Myhonghong_1GroupPhoto');
-                        if (Myhonghong_1PhotoElement && Myhonghong_1PhotoElement.complete && Myhonghong_1PhotoElement.naturalHeight !== 0) {
+                        const XINGXINGPhotoElement = document.getElementById('XINGXINGGroupPhoto');
+                        if (XINGXINGPhotoElement && XINGXINGPhotoElement.complete && XINGXINGPhotoElement.naturalHeight !== 0) {
                             // Calculate dimensions to fit the photo properly
-                            const imgAspect = Myhonghong_1PhotoElement.naturalWidth / Myhonghong_1PhotoElement.naturalHeight;
+                            const imgAspect = XINGXINGPhotoElement.naturalWidth / XINGXINGPhotoElement.naturalHeight;
                             const areaAspect = stripWidth / membersAreaHeight;
                             
                             let drawWidth, drawHeight, drawX, drawY;
@@ -645,7 +645,7 @@
                             
                             // Add a subtle overlay to blend with the background
                             ctx.globalAlpha = 0.9;
-                            ctx.drawImage(Myhonghong_1PhotoElement, drawX, drawY, drawWidth, drawHeight);
+                            ctx.drawImage(XINGXINGPhotoElement, drawX, drawY, drawWidth, drawHeight);
                             ctx.globalAlpha = 1;
                         }
                     };
@@ -653,7 +653,7 @@
                     drawMembersArea();
                     
                     // Photo slots - clean layout matching reference
-                    const photoStartY = 520;
+                    const photoStartY = 510;
                     const photoWidth = 390;
                     const photoHeight = 220;
                     const photoSpacing = 35;
@@ -665,11 +665,11 @@
                             const yPos = photoStartY + (i * (photoHeight + photoSpacing));
                             
                             // Draw fixed rectangle frame background
-                            ctx.fillStyle = '#FF69B4';
+                            ctx.fillStyle = '#000000';
                             ctx.fillRect(photoX, yPos, photoWidth, photoHeight);
                             
                             // Add frame border
-                            ctx.strokeStyle = '#FF69B4';
+                            ctx.strokeStyle = '#333333';
                             ctx.lineWidth = 2;
                             ctx.strokeRect(photoX, yPos, photoWidth, photoHeight);
                             
@@ -707,7 +707,7 @@
                                 });
                             } else {
                                 // Placeholder text
-                                ctx.fillStyle = '#FF69B4';
+                                ctx.fillStyle = '#666666';
                                 ctx.font = '16px "Montserrat", sans-serif';
                                 ctx.textAlign = 'center';
                                 ctx.fillText(`Photo ${i + 1}`, stripWidth / 2, yPos + photoHeight / 2);
@@ -720,17 +720,17 @@
                     // Footer section - matching the exact layout with gold colors
                     const footerStartY = stripHeight - 70;
                     
-                    ctx.fillStyle = '#FF69B4';
+                    ctx.fillStyle = '#FF81C0';
                     ctx.font = 'bold 16px "Montserrat", sans-serif';
-                    ctx.fillText('Hong Pichetpong Chiradatesakunvong', stripWidth / 2, footerStartY + 10);
+                    ctx.fillText('HAPPY BIRTHDAY ELIOT!', stripWidth / 2, footerStartY + 10);
                     
-                    ctx.fillStyle = '#FF69B4';
-                    ctx.font = 'bold 15px "Montserrat", sans-serif';
-                    ctx.fillText('HONG PHILIPPINES', stripWidth / 2, footerStartY + 30);
+                    ctx.fillStyle = '#FFA500';
+                    ctx.font = 'bold 13px "Montserrat", sans-serif';
+                    ctx.fillText('XINGQIU PHILIPPINES', stripWidth / 2, footerStartY + 30);
                     
                     // Create download
                     const link = document.createElement('a');
-                    link.download = 'HONGPHILIPPINES_photostrip.jpg';
+                    link.download = 'HAPPY_BIRTHDAY_ELIOT_photostrip.jpg';
                     link.href = photoStripCanvas.toDataURL('image/jpeg', 0.9);
                     link.click();
                     
